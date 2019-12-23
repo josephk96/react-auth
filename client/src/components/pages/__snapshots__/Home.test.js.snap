@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders without crashing 1`] = `
+"<Fragment>
+  <styled.div>
+    <Chat messages={{...}} />
+  </styled.div>
+  <styled.form>
+    <styled.div>
+      <styled.input onChange={[Function: onChange]} value=\\"\\" name=\\"msg\\" autoComplete=\\"off\\" />
+      <styled.button type=\\"submit\\" onClick={[Function: onSubmit]}>
+        <i class=\\"far fa-paper-plane\\" />
+      </styled.button>
+    </styled.div>
+  </styled.form>
+</Fragment>"
+`;
