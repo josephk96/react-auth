@@ -10,12 +10,6 @@ import axios from 'axios';
 const url = "ws://192.168.0.101";
 const ws = new ReconnectingWebSocket(url);
 
-// const Container = styled.div`
-//   grid-area: body;
-//   ${breakpoint("md")`
-//   `}
-// `;
-
 const ChatContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
@@ -123,7 +117,6 @@ const Home = () => {
 
   return (
     <>
-      {/* <LeftSidebar /> */}
       <ChatContainer>
         <Chat messages={messages} />
       </ChatContainer>
