@@ -85,7 +85,7 @@ const Register = () => {
   const { name, email, password, password2 } = user;
 
   const onSubmit = e => {
-    e.preventDefault();    e.preventDefault();
+    e.preventDefault();
 
     if (name === "" || email === "" || password === "" || password2 === "") {
       return alert.error("Please fill out all fields");
@@ -115,6 +115,7 @@ const Register = () => {
             <StyledLabel htmlFor="name">Name</StyledLabel>
             <StyledInput
               type="text"
+              id="name"
               name="name"
               value={name}
               onChange={onChange}
@@ -124,6 +125,7 @@ const Register = () => {
             <StyledLabel htmlFor="email">Email</StyledLabel>
             <StyledInput
               type="email"
+              id="email"
               name="email"
               value={email}
               onChange={onChange}
@@ -133,6 +135,7 @@ const Register = () => {
             <StyledLabel htmlFor="password">Password</StyledLabel>
             <StyledInput
               type="password"
+              id="password"
               name="password"
               value={password}
               onChange={onChange}
@@ -142,13 +145,14 @@ const Register = () => {
             <StyledLabel htmlFor="password2">Password Confirmation</StyledLabel>
             <StyledInput
               type="password"
+              id="password2"
               name="password2"
               value={password2}
               onChange={onChange}
             />
           </StyledDiv>
           <SubmitWrapper>
-            <StyledSubmitInput type="submit">Submit</StyledSubmitInput>
+            <StyledSubmitInput type="submit" id="submitButton">Submit</StyledSubmitInput>
           </SubmitWrapper>
         </form>
       </RegisterWrapper>

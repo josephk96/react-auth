@@ -68,6 +68,8 @@ const StyledLogout = styled(Link)`
     `}
 `;
 
+StyledLogout.displayName = 'StyledLogout';
+
 const Navbar = () => {
   const authContext = useContext(AuthContext);
   const { isAuthenticated, logout } = authContext;

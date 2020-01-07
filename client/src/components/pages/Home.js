@@ -21,6 +21,8 @@ const ChatContainer = styled.div`
   justify-content: space-between;
 `;
 
+ChatContainer.displayName = 'ChatContainer'
+
 const Form = styled.form`
   grid-area: footer;
   display: block;
@@ -29,7 +31,8 @@ const Form = styled.form`
   position: sticky;
   background-color: #ffffff;
 `;
-  ;
+
+Form.displayName = 'Form';
 
 const InputWrapper = styled.div`
   height: 100%;
@@ -51,6 +54,8 @@ const Input = styled.input`
     `}
 `;
 
+Input.displayName = 'Input'
+
 const Button = styled.button`
   display: flex;
   padding-top: 0.6rem;
@@ -66,10 +71,7 @@ const Button = styled.button`
     `}
 `;
 
-// const LeftSidebar = styled.div`
-//   background-color: #e3e8e5;
-//   width: 100%;
-// `;
+Button.displayName = 'Button';
 
 const Home = () => {
   const authContext = useContext(AuthContext);

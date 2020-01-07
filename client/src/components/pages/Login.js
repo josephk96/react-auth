@@ -111,8 +111,11 @@ const CreditLink = styled.a`
   font-weight: 700;
 `;
 
-  let randomInt = Math.floor(Math.random() * avatars.length);
-  const randomAvatar = avatars[randomInt];
+CreditLink.displayName = 'CreditLink';
+
+
+let randomInt = Math.floor(Math.random() * avatars.length);
+const randomAvatar = avatars[randomInt];
 
 const Login = () => {
   const alert = useAlert();
@@ -160,13 +163,14 @@ const Login = () => {
       <LoginWrapper>
         {isAuthenticated && <Redirect to="/" />}
         <ImgWrapper>
-          <Image src={randomAvatar} />
+          <Image src={randomAvatar} id='avatar'/>
         </ImgWrapper>
         <form onSubmit={onSubmit}>
           <StyledDiv>
             <StyledLabel htmlFor="email">Email</StyledLabel>
             <StyledInput
               type="email"
+              id="email"
               name="email"
               value={email}
               onChange={onChange}
@@ -176,13 +180,14 @@ const Login = () => {
             <StyledLabel htmlFor="password">Password</StyledLabel>
             <StyledInput
               type="password"
+              id="password"
               name="password"
               value={password}
               onChange={onChange}
             />
           </StyledDiv>
           <SubmitWrapper>
-            <StyledSubmitInput type="submit">Log in</StyledSubmitInput>
+            <StyledSubmitInput id="submitButton" type="submit">Log in</StyledSubmitInput>
           </SubmitWrapper>
         </form>
         <CreditWrapper>

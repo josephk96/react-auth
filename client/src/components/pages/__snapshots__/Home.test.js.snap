@@ -2,16 +2,16 @@
 
 exports[`Home renders without crashing 1`] = `
 "<Fragment>
-  <styled.div>
+  <ChatContainer>
     <Chat messages={{...}} />
-  </styled.div>
-  <styled.form>
+  </ChatContainer>
+  <Form>
     <styled.div>
-      <styled.input onChange={[Function: onChange]} value=\\"\\" name=\\"msg\\" autoComplete=\\"off\\" />
-      <styled.button type=\\"submit\\" onClick={[Function: onSubmit]}>
+      <Input onChange={[Function: onChange]} value=\\"\\" name=\\"msg\\" autoComplete=\\"off\\" />
+      <Button type=\\"submit\\" onClick={[Function: onSubmit]}>
         <i class=\\"far fa-paper-plane\\" />
-      </styled.button>
+      </Button>
     </styled.div>
-  </styled.form>
+  </Form>
 </Fragment>"
 `;
