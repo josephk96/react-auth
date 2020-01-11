@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import user from '../../fixtures/user.json';
 
 describe('Home Page', () => {

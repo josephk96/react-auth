@@ -1,8 +1,12 @@
+/* eslint-disable no-undef */
 import user from '../../fixtures/user.json';
 
+// eslint-disable-next-line no-undef
 describe('Login page', () => {
+  // eslint-disable-next-line no-undef
   before(() => cy.visit('localhost:3000/login'));
 
+  // eslint-disable-next-line no-undef
   it('should have an avatar', () => {
     // * The avatar should be visible
     cy.get('#avatar').should('be.visible');
@@ -24,6 +28,7 @@ describe('Login page', () => {
     // # Click the signout icon
     cy.get('.fa-sign-out-alt').should('be.visible').click();
 
+    // eslint-disable-next-line max-len
     // * Check whether the page was directed back to the login route and if the email input field is visible
     cy.get('#email').should('be.visible');
 

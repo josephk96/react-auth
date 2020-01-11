@@ -25,7 +25,7 @@ const options = {
 
 const Root = () => (
   <ThemeProvider theme={theme}>
-    <AlertProvider template={AlertTemplate} {...options}>
+    <AlertProvider template={AlertTemplate} {...options} id='alert'>
       <App />
     </AlertProvider>
   </ThemeProvider>

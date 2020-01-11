@@ -1,7 +1,10 @@
+/* eslint-disable no-console */
 const express = require('express');
+
 const app = express();
 const port = process.env.PORT || 6000;
 const WebSocket = require('ws');
+
 const wss = new WebSocket.Server({ port: 8080 });
 const connectDB = require('./config/db');
 
@@ -18,23 +21,13 @@ app.use('/api/verify', require('./routes/verify'));
 
 app.listen(port, () => console.log(`Server is connected to port : ${port} !`));
 
-wss.on("connection", function connection(ws) {
-  ws.on("message", function incoming(data) {
-    wss.clients.forEach(function each(client) {
+wss.on('connection', (ws) => {
+  ws.on('message', (data) => {
+    wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
-        console.log(data)
+        console.log(data);
         client.send(data);
       }
     });
   });
 });
-
-
-// wss.on('connection', function connection(ws) {
-//   count++;
-//   ws.on("msg", { count });
-//   ws.on("disconnect", function() {
-//     count--;
-//     ws.on("message", { count });
-//   });
-// })
