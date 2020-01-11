@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('Register page', () => {
   before(() => cy.visit('localhost:3000/register'));
 
