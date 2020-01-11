@@ -1,5 +1,5 @@
 module.exports = {
   setupFiles: [
-    'src/setupTests.js'
-  ]
+    'src/setupTests.js',
+  ],
 };
