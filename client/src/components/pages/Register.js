@@ -23,6 +23,8 @@ const StyledHeading = styled.h2`
   margin-bottom: 1rem;
 `; 
 
+StyledHeading.displayName = 'StyledHeading';
+
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -108,7 +110,7 @@ const Register = () => {
     <Wrapper>
       <RegisterWrapper>
         {isAuthenticated && <Redirect to="/" />}
-        <StyledHeading>Sign up</StyledHeading>
+        <StyledHeading id="styledHeading">Sign Up</StyledHeading>
 
         <form onSubmit={onSubmit}>
           <StyledDiv>

@@ -115,15 +115,15 @@ const Chat = (props) => {
         <List>
           {messages.map(x =>
             x.name === localStorage.name ? (
-              <LeftChat>
+              <LeftChat id='leftChat'>
                 <LeftName>{x.name}</LeftName>
-                <LeftMsg>{x.msg}</LeftMsg>
+                <LeftMsg id='leftMsg'>{x.msg}</LeftMsg>
                 <LeftTime>{x.time}</LeftTime>
               </LeftChat>
             ) : (
-              <RightChat>
+              <RightChat id='rightChat'>
                 <RightName>{x.name}</RightName>
-                <RightMsg>{x.msg}</RightMsg>
+                <RightMsg id='rightMsg'>{x.msg}</RightMsg>
                 <RightTime>{x.time}</RightTime>
               </RightChat>
             )
