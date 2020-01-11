@@ -7,8 +7,8 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  CLEAR_ERRORS
-} from "../types";
+  CLEAR_ERRORS,
+} from '../types';
 
 export default (state, action) => {
   switch (action.type) {
@@ -19,7 +19,7 @@ export default (state, action) => {
         ...state,
         isAuthenticated: true,
         loading: false,
-        user: action.payload
+        user: action.payload,
       };
 
     case REGISTER_SUCCESS:
@@ -29,7 +29,7 @@ export default (state, action) => {
         ...state,
         ...action.payload,
         isAuthenticated: true,
-        loading: false
+        loading: false,
       };
 
     case VERIFY_SUCCESS:
@@ -37,8 +37,8 @@ export default (state, action) => {
         ...state,
         ...action.payload,
         isAuthenticated: true,
-        loading: false
-      }
+        loading: false,
+      };
 
     case AUTH_ERROR:
     case REGISTER_FAIL:
@@ -65,10 +65,10 @@ export default (state, action) => {
     case CLEAR_ERRORS:
       return {
         ...state,
-        error: null
+        error: null,
       };
 
     default:
       return state;
   }
-}
+};
