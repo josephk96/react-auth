@@ -7,9 +7,11 @@ import breakpoint, { map } from "styled-components-breakpoint";
 import ReconnectingWebSocket from 'reconnecting-websocket';
 import axios from 'axios';
 
-const url = "ws://192.168.0.101";
+// const url = "ws://192.168.1.167:8080";
+const url = process.env.REACT_APP_WS_URL;
 const ws = new ReconnectingWebSocket(url);
 
+console.log(process.env)
 const ChatContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
@@ -127,6 +129,7 @@ const Home = () => {
             value={msg}
             name="msg"
             autoComplete="off"
+            id="msgInput"
           />
           <Button type="submit" onClick={onSubmit}>
             <i class="far fa-paper-plane"></i>
