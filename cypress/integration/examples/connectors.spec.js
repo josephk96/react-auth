@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 / <reference types="Cypress" />
+=======
+/// <reference types="Cypress" />
+>>>>>>> 838bd26... Add Cypress e2e tests
 
 context('Connectors', () => {
   beforeEach(() => {

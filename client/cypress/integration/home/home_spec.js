@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable no-undef */
+=======
+>>>>>>> 838bd26... Add Cypress e2e tests
 import user from '../../fixtures/user.json';
 
 describe('Home Page', () => {
