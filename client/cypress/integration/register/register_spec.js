@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 /* eslint-disable no-undef */
-=======
->>>>>>> 838bd26... Add Cypress e2e tests
 describe('Register page', () => {
   before(() => cy.visit('localhost:3000/register'));
 
