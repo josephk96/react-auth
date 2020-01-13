@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const db = 'mongodb://localhost:27017/react-auth';
+const db = process.env.MONGO_URL;
 mongoose.set('useCreateIndex', true);
 
 const connectDB = async () => {

@@ -7,7 +7,6 @@ import breakpoint, { map } from "styled-components-breakpoint";
 import ReconnectingWebSocket from 'reconnecting-websocket';
 import axios from 'axios';
 
-// const url = "ws://192.168.1.167:8080";
 const url = process.env.REACT_APP_WS_URL;
 const ws = new ReconnectingWebSocket(url);
 
