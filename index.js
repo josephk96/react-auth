@@ -1,12 +1,14 @@
 /* eslint-disable no-console */
 const express = require('express');
 const path = require('path');
+const http = require('http');
 
 const app = express();
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 4000;
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 8080 });
+const httpServer = http.createServer(app);
+const wss = new WebSocket.Server({ 'server': httpServer });
 const connectDB = require('./config/db');
 
 connectDB();
@@ -24,7 +26,7 @@ app.get('*', (req, res) => {
 });
 
 
-app.listen(port, () => console.log(`Server is connected to port : ${port} !`));
+httpServer.listen(port, () => console.log(`Server is connected to port : ${port} !`));
 
 wss.on('connection', (ws) => {
   ws.on('message', (data) => {
