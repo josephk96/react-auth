@@ -17,19 +17,13 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/verify', require('./routes/verify'));
 
-<<<<<<< HEAD
-=======
-// ... other app.use middleware 
-app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
-// ...
-// Right before your app.listen(), add this:
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
 
->>>>>>> 6aa3e25... Make express app serve up react app
 app.listen(port, () => console.log(`Server is connected to port : ${port} !`));
 
 wss.on('connection', (ws) => {
