@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 6000;
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ app });
+const wss = new WebSocket.Server({ server: app });
 const connectDB = require('./config/db');
 
 connectDB();
