@@ -85,7 +85,7 @@ const RightMsg = styled.span`
   width: fit-content;
   background-color: #2ce2e6;
   word-break: break-all;
-  padding: 0.5rem;
+  padding: 0.8rem;
   border-radius: 0.5rem;
   margin-top: 0.3rem;
   color: black;
