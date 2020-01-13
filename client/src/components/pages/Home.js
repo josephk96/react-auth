@@ -7,7 +7,7 @@ import breakpoint, { map } from "styled-components-breakpoint";
 import ReconnectingWebSocket from 'reconnecting-websocket';
 import axios from 'axios';
 
-const url = process.env.REACT_APP_WS_URL;
+const url = location.origin.replace(/^http/, 'wss');
 const ws = new ReconnectingWebSocket(url);
 
 console.log(process.env)
