@@ -23,8 +23,10 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm ci
-        cd client && npm i
+        cd client
+        rm -rf node_modules
+        npm i
         npm test
-        npm run build --if-present
+        npm run build
       env:
         CI: true
