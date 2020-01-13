@@ -3,9 +3,9 @@
 exports[`Register component tests renders without crashing 1`] = `
 "<styled.div>
   <styled.div>
-    <styled.h2>
-      Sign up
-    </styled.h2>
+    <StyledHeading id=\\"styledHeading\\">
+      Sign Up
+    </StyledHeading>
     <form onSubmit={[Function: onSubmit]}>
       <styled.div>
         <styled.label htmlFor=\\"name\\">

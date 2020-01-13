@@ -7,7 +7,7 @@ exports[`Home renders without crashing 1`] = `
   </ChatContainer>
   <Form>
     <styled.div>
-      <Input onChange={[Function: onChange]} value=\\"\\" name=\\"msg\\" autoComplete=\\"off\\" />
+      <Input onChange={[Function: onChange]} value=\\"\\" name=\\"msg\\" autoComplete=\\"off\\" id=\\"msgInput\\" />
       <Button type=\\"submit\\" onClick={[Function: onSubmit]}>
         <i class=\\"far fa-paper-plane\\" />
       </Button>
