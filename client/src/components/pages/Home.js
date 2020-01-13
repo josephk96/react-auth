@@ -7,8 +7,8 @@ import breakpoint, { map } from "styled-components-breakpoint";
 import ReconnectingWebSocket from 'reconnecting-websocket';
 import axios from 'axios';
 
-const url = window.location.origin.replace(/^http/, 'ws');
-const ws = new ReconnectingWebSocket(url);
+const url = window.location.origin.replace(/^https/, 'wss');
+const ws = new ReconnectingWebSocket(`${url}:8080`);
 // 
 console.log(process.env)
 const ChatContainer = styled.div`
