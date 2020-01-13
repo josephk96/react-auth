@@ -7,9 +7,9 @@ import breakpoint, { map } from "styled-components-breakpoint";
 import ReconnectingWebSocket from 'reconnecting-websocket';
 import axios from 'axios';
 
-const url = location.origin.replace(/^http/, 'wss');
+const url = location.origin.replace(/^http/, 'ws');
 const ws = new ReconnectingWebSocket(url);
-
+// 
 console.log(process.env)
 const ChatContainer = styled.div`
   flex-direction: column;
