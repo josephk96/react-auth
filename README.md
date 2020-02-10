@@ -17,11 +17,18 @@ In your clone (or fork) server (backend) directory, run ```npm i``` to install a
 Below are the list of the environment variables that you need to configure before being able to run this program:
 
 Server .env variables:
-- MONGO_URL   (The url for your MongoDB instance. You are free to choose between a local Mongo instance, a cloud-based one or a Docker container)
-- SECRET      (jwt secret; this can be any random value)
+
+| Variable name | Example value | Explanations / Notes |
+| :--: | :--: | :-- |
+| PORT | 4000 | The port being used by the server |
+| MONGO_URL | mongodb://127.0.0.1:27017 | The url for your MongoDB instance. You are free to choose between a local Mongo instance, a cloud-based one or a Docker container |
+| SECRET | asdfasdhbrqwkehrgqlwke | jwt secret; this can be any random value |
 
 Client .env variables:
-- REACT_APP_WS_URL      (This is the URL of your websocket instance. If running locally, set it as ```wss://<your local url>:8080```
+
+| Variable name | Example value | Explanations / Notes |
+| :--: | :--: | :-- |
+| REACT_APP_WS_URL | wss://192.168.1.165:8080 | This is the URL of your websocket instance. If running locally, set it as ```wss://<your local url>:8080``` |
 
 ## Running the tests
 
