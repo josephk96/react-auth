@@ -34,11 +34,11 @@ Client .env variables:
 
 I have configured 2 types of frontend tests for this project - Unit testing with Jest and e2e testing with Cypress.
 
-### Unit testing - Jest
+#### Unit testing - Jest
 ```cd client``` and enter the client directory. In the client directory, enter the ```npm run test``` command.\
 If you decide to change some of the source code, please update the snapshots with the ```npm run test -- -u```.
 
-### End to End testing - Cypress
+#### End to End testing - Cypress
 In order to configure testing for e2e, open the ```seeder.js``` file in the server directory and change the databaseURL to your own test MongoDB.\
 After doing this, change the server environment variable of MONGO_URL to that of your test DB.
 
