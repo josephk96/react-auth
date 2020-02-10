@@ -48,7 +48,7 @@ After doing this, change the server environment variable of MONGO_URL to that of
 
 ## Deployment
 
-There are many different methods you can use to deploy this project. You can seperate the client and server directories and deploy them in 2 different instances with a seperate MongoDB instance running, or you can do what I did and use Heroku to deploy the server and client in one single instance.\
+There are many different methods you can use to deploy this project. You can seperate the client and server directories and deploy them in 2 different instances with a seperate MongoDB instance running, or you can do what I did and use Heroku to deploy the server and client in one single instance.
 
 https://blog.heroku.com/six-strategies-deploy-to-heroku\
 I used the GitHub Integration method, and set up GitHub Actions for my CI and configured Heroku to prevent deployments when the tests in the CI stage fail.
