@@ -3,6 +3,9 @@ This mobile-responsive chat app was built as a personal project to practice and 
 \
 Users can sign up and chat with multiple people after being redirected to the home route.  The avatar in the login screen is dynamic, and changes with every refresh.
 
+<img width="1652" alt="Screen Shot 2020-02-10 at 10 24 17 AM" src="https://user-images.githubusercontent.com/44601888/74114811-96f30f80-4bef-11ea-87a7-ca4e9c05e6d5.png">
+
+
 
 ## Installing
 
@@ -18,8 +21,7 @@ Server .env variables:
 - SECRET      (jwt secret; this can be any random value)
 
 Client .env variables:
-- REACT_APP_WS_URL      (This is the URL of your websocket instance. If running locally, set it as ```wss://<your local url>:8080```\
-\
+- REACT_APP_WS_URL      (This is the URL of your websocket instance. If running locally, set it as ```wss://<your local url>:8080```
 
 ## Running the tests
 
@@ -33,41 +35,30 @@ If you decide to change some of the source code, please update the snapshots wit
 In order to configure testing for e2e, open the ```seeder.js``` file in the server directory and change the databaseURL to your own test MongoDB.\
 After doing this, change the server environment variable of MONGO_URL to that of your test DB.
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+1. In the server directory, run ```npm run seed``` to start seeding the database.
+2. ```cd client``` and run ```npx cypress open``` to open the Cypress GUI and run all tests.
+3. ```cd ..``` and run ```npm run clean``` to erase the test DB.
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+There are many different methods you can use to deploy this project. You can seperate the client and server directories and deploy them in 2 different instances with a seperate MongoDB instance running, or you can do what I did and use Heroku to deploy the server and client in one single instance.\
+
+https://blog.heroku.com/six-strategies-deploy-to-heroku\
+I used the GitHub Integration method, and set up GitHub Actions for my CI and configured Heroku to prevent deployments when the tests in the CI stage fail.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* [React](https://github.com/facebook/react)
+* [StyledComponents](https://github.com/styled-components/styled-components)
+* [NodeJS](https://github.com/nodejs/node)
+* [Express](https://github.com/expressjs/express)
+* [ws](https://github.com/websockets/ws)
+* [Jest](https://github.com/facebook/jest)
+* [Cypress](https://github.com/cypress-io/cypress)
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Soo Hwan Kim** - *Initial work* - [josephk96](https://github.com/josephk96)
 
 ## License
 
@@ -75,6 +66,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* https://github.com/avasconcelos114, my mentor, for helping me with the many issues I faced when creating this app.
