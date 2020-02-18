@@ -1,10 +1,10 @@
-const express = require("express");
+const express = require('express');
 
 const router = express.Router();
 
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
-require("dotenv").config();
+require('dotenv').config();
 
 router.post('/', async (req, res) => {
   const token = req.header('x-auth-token');
@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
   if (!token) {
     return res.status(401).json({ msg: 'No token, authorization denied' });
   }
-  console.log('making api call to /verify')
+  console.log('making api call to /verify');
 
   try {
     const decoded = jwt.verify(token, process.env.SECRET);
