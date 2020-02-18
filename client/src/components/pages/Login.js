@@ -121,7 +121,7 @@ const Login = () => {
   const alert = useAlert();
 
   const authContext = useContext(AuthContext);
-  const { login, verifyLocalStorage, isAuthenticated, error } = authContext;
+  const { login, verifyLocalStorage, isAuthenticated, error, clearErrors } = authContext;
 
   const [user, setUser] = useState({
     email: '',
@@ -138,25 +138,19 @@ const Login = () => {
     if (email === "" || password === "") {
       return alert.error("Please enter your email or password!");
     }
-    if (error !== null) {
-      return alert.error("Your email or password is incorrect");
-    }
 
     login({
       email,
       password
     });
+
     console.log("Login form successfully submitted!");
   };
 
-  // let randomInt = Math.floor(Math.random() * avatars.length);
-  // const randomAvatar = avatars[randomInt];
-
-  // useEffect(() => {
-  //   if (isAuthenticated) {
-  //     <Redirect to='/' />
-  //   }
-  // })
+  if (error !== null) {
+    alert.error("Your email or password is incorrect");
+    clearErrors();
+  }
 
   return (
     <Wrapper>

@@ -12,7 +12,7 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  CLEAR_ERRORS
+  CLEAR_ERRORS,
 } from "../types";
 
 const AuthState = props => {
@@ -105,6 +105,13 @@ const AuthState = props => {
   }
 
   // Clear Errors
+  const clearErrors = () => {
+    try {
+      dispatch({ type: CLEAR_ERRORS })
+    } catch (err) {
+      console.error(err.message);
+    }
+  }
 
   return (
     <AuthContext.Provider
@@ -118,7 +125,8 @@ const AuthState = props => {
         verifyLocalStorage,
         register,
         login,
-        logout
+        logout,
+        clearErrors
       }}
     >
       {props.children}
