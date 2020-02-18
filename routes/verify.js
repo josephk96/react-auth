@@ -11,6 +11,8 @@ router.post('/', async (req, res) => {
 
   if (!token) {
     return res.status(401).json({ msg: 'No token, authorization denied' });
+  } else {
+    return res.status(200).json({ msg: 'Token found -- Verifying...' })
   }
   console.log('making api call to /verify')
 
